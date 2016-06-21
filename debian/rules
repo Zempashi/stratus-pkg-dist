@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+
+export PYBUILD_NAME=stratus
+export PYBUILD_DISABLE=test
+
+%:
+	dh $@ --with python2,python3 --buildsystem=pybuild
+
+
+override_dh_auto_install:
+	dh_auto_install
+
+
+# vim:set noexpandtab

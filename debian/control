@@ -1,0 +1,25 @@
+Source: stratus
+Maintainer: Julien Girardin
+Section: python
+Priority: optional
+Build-Depends: python-all, python3-all, dh-python, debhelper (>= 7)
+Standards-Version: 3.9.4
+
+Package: python-stratus
+X-Python-Version: >= 2.7
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}
+Description: An hypervisor manager without agent (django module)
+
+Package: python3-stratus
+X-Python3-Version: >= 3.0
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends}
+Description: An hypervisor manager without agent (django module)
+
+Package: stratus
+X-Python-Version: >= 2.7
+X-Python3-Version: >= 3.0
+Architecture: all
+Depends: ${misc:Depends}, python-stratus | python3-stratus
+Description: An hypervisor manager without agent
